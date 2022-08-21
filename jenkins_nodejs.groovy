@@ -14,7 +14,7 @@ job("Any_name") {
         nodejs('nodejs')
     }
 
-    step {
+    steps {
         shell("npm install")
     }
     
