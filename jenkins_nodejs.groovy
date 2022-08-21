@@ -16,6 +16,15 @@ job("Any_name") {
 
     steps {
         shell("npm install")
+        dockerBuildAndPublish {
+            repositoryName('jchand3/jenkins-demo')
+            tag('${GIT_REVISION,length=9}')
+            registryCredentials('dockerhub')
+            forcePull(false)
+            forceTag(false)
+            createFingerprints(false)
+            skipDecorate()
+        }
     }
     
 }
