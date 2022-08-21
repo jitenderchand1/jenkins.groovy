@@ -19,7 +19,7 @@ job("Any_name") {
         dockerBuildAndPublish {
             repositoryName('jchand3/jenkins-demo')
             tag('${GIT_REVISION,length=9}')
-            registryCredentials('dockerhub')
+            registryCredentials('jchand3')
             forcePull(false)
             forceTag(false)
             createFingerprints(false)
