@@ -1,4 +1,4 @@
-job("Any name") {
+job("Any_name") {
     scm {
         git('git://github.com/jitenderchand1/docker-demo.git') { node ->
             node / gitConfigName("jitender")
